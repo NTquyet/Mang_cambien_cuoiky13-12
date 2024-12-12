@@ -1,0 +1,66 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f2f5;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    gap: 20px;
+    width: 80%;
+    max-width: 600px;
+}
+
+.box {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.wind-speed .value {
+    font-size: 2em;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.chart {
+    height: 300px;
+}
+
+.led-control .led-status {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.led-box {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #000;
+    background-color: #000;
+}
+
+#led-left-box.led-on,
+#led-right-box.led-on {
+    background-color: red;
+}
+
+#led-left-box.led-off,
+#led-right-box.led-off {
+    background-color: black;
+}
