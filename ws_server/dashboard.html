@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Home Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mqtt/4.2.8/mqtt.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Smart Home Dashboard</h1>
+    <div class="dashboard">
+        <!-- Row 1: Gauges -->
+        <div class="gauge-container">
+            <div class="box temperature">
+                <div class="title">Nhiệt độ</div>
+                <div class="value"><span id="temp-value">--</span> °C</div>
+            </div>
+            <div class="box humidity">
+                <div class="title">Độ ẩm</div>
+                <div class="value"><span id="humidity-value">--</span> %</div>
+            </div>
+            <div class="box light">
+                <div class="title">Ánh sáng</div>
+                <div class="value"><span id="light-value">--</span> lx</div>
+            </div>
+        </div>
+        <!-- Row 2: Switches and Chart -->
+        <div class="chart-switch-container">
+            <div class="switch-container">
+                <div class="title">Điều khiển LED</div>
+                <div class="switch-group">
+                    <label>
+                        <input type="checkbox" id="led1-switch"> LED 1
+                    </label>
+                    <label>
+                        <input type="checkbox" id="led2-switch"> LED 2
+                    </label>
+                    <label>
+                        <input type="checkbox" id="led3-switch"> LED 3
+                    </label>
+                </div>
+            </div>
+            <div class="chart-container">
+                <canvas id="chart"></canvas>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
